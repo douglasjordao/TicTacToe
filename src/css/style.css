@@ -1,0 +1,114 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.title {
+    margin-top: 30px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.x-img {
+    width: 50px;
+    height: 50px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.o-img {
+    width: 60px;
+    height: 50px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.o-img-mark, .x-img-mark {
+    width: 100px;
+    height: 100px;
+}
+
+.score-x, .score-o {
+    width: 150px;
+    border: solid 1px;
+    border-radius: 5px;
+    font-size: 30px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.small-mark-x, .small-mark-o {
+    width: 30px;
+    height: 30px;
+}
+
+.status {
+    font-size: 30px;
+    padding-top: 20px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.reset-btn-div {
+    margin-top: 400px;
+}
+
+.board {
+    margin-top: 15px;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    display: grid;
+    gap: 18px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, auto);
+    background-image: url('/src/img/tictactoe.png');
+    background-size: 350px 350px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: none;
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.cell:first-child, .cell:nth-child(2), .cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n+1) {
+    border-left: none;
+}
+
+.cell:nth-child(3n+3) {
+    border-right: none;
+}
+
+.cell:last-child, .cell:nth-child(7), .cell:nth-child(8) {
+    border-bottom: none;
+}
+
+.xMark {
+    background-image: url('/src/img/x.png');
+    background-size: 100px 100px;
+}
+
+.oMark {
+    background-image: url('/src/img/o.png');
+    background-size: 100px 100px;
+}
