@@ -7,12 +7,11 @@ export default class Game {
         ];
         this.player = player;
         this.ai = ai;
-        this.activePlayer = 0;
+        this.activePlayer = 1;
     }
 
     startGame() {
         resetGame(this.board);
-        this.activePlayer = (this.activePlayer + 1) % 2;
     }
 
     placeMark(target) {
@@ -22,6 +21,7 @@ export default class Game {
                 //Player Move
                 if (gameOver(this.board)) {
                     declareWinner(this.board, this.player, this.ai);
+                    this.activePlayer = 1;
                     return;
                 } else if (this.activePlayer == 1) {
                     this.player.makeMove(target, this.board);
@@ -31,6 +31,7 @@ export default class Game {
                 //Ai Move
                 if (gameOver(this.board)) {
                     declareWinner(this.board, this.player, this.ai);
+                    this.activePlayer = 1;
                     return;
                 } else if (this.activePlayer == 0) {
                     this.ai.makeMove(this.board, this.activePlayer);
@@ -40,6 +41,7 @@ export default class Game {
                 //Check if there's a winner
                 if (gameOver(this.board)) {
                     declareWinner(this.board, this.player, this.ai);
+                    this.activePlayer = 1;
                     return;
                 }
 
