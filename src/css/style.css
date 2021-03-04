@@ -31,11 +31,6 @@ body {
     padding-left: 5px;
 }
 
-.o-img-mark, .x-img-mark {
-    width: 100px;
-    height: 100px;
-}
-
 .score-x, .score-o {
     width: 150px;
     border: solid 1px;
@@ -55,10 +50,6 @@ body {
     padding-top: 20px;
     font-weight: bold;
     font-family: monospace;
-}
-
-.reset-btn-div {
-    margin-top: 400px;
 }
 
 .board {
@@ -111,4 +102,8 @@ body {
 .oMark {
     background-image: url('/src/img/o.png');
     background-size: 100px 100px;
+}
+
+.reset-btn-div {
+    margin-top: 400px;
 }
