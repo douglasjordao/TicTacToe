@@ -112,3 +112,8 @@ body {
     background-image: url('/src/img/o.png');
     background-size: 100px 100px;
 }
+
+.footer {
+    height: 50px;
+    width: 100vw;
+}
